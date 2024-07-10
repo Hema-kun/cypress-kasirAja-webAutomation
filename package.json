@@ -1,0 +1,19 @@
+{
+  "name": "cypress-kasiraja-webautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:chrome" : "npx cypress run --browser chrome",
+    "cy:edge" : "npx cypress run --browser edge",
+    "cy:run": "npx cypress run ",
+    "cy:open": "npx cypress open",
+    "cy:report": "npx cypress run --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.12.0",
+    "mochawesome": "^7.1.3"
+  }
+}
