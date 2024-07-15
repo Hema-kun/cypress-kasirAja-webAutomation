@@ -18,7 +18,7 @@ module.exports = defineConfig({
       // Customize the directory in which reports are saved
       reportsDir: "reports/html",
       // Customize the report file name
-      reportFilename: "[status]_[datetime]-[name]-report",
+      reportFilename: "[status]-[name]-report",
       timestamp: "longDate",
       // Generate new report file or overwrite the a single file
       overwrite: true
