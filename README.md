@@ -1,4 +1,4 @@
-## UI Automation Repository for kasirAja Website (POS Website) using Cypress
+## UI Automation Repository for kasirAja Website (POS Website) using Cypress@
 Welcome to UI Automation Reposity for kasirAja website using Cypress.  This is an automated test case examples for Login, Dashboard, Add Penjualan, Add Pembelian, Add Kategori, Add Produk, Add Pengguna, Add Pelanggan.
 
 ## Table of Contents
