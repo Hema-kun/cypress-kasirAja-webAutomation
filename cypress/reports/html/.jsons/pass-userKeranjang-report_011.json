@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-03T21:47:37.646Z",
+    "end": "2025-07-03T21:47:58.320Z",
+    "duration": 20674,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c67eab43-171a-49c7-a5cf-7c2298ec0d86",
+      "title": "",
+      "fullFile": "cypress\\e2e\\userKeranjang.cy.js",
+      "file": "cypress\\e2e\\userKeranjang.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f112221e-d0f6-46ed-9728-79280b49fd15",
+          "title": "User Keranjang",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check keranjang kosong",
+              "fullTitle": "User Keranjang Check keranjang kosong",
+              "timedOut": null,
+              "duration": 5010,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[href='https://wikanta.com/cart']\").click();\ncy.get(\".text-center.mt-5.mb-5\").should(\"contain\", \"Tidak ada data\");",
+              "err": {},
+              "uuid": "ad097d7b-1aa7-4128-ab39-4d739f949ab9",
+              "parentUUID": "f112221e-d0f6-46ed-9728-79280b49fd15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check masukkan produk stock 0",
+              "fullTitle": "User Keranjang Check masukkan produk stock 0",
+              "timedOut": null,
+              "duration": 3980,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Kemeja Pria Polos Kerah']\").click();\ncy.get(\"#add-to-cart\").click().wait(500);\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Stok produk ini adalah 0\");\ncy.get(\"#shop-now\").click();\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Stok produk ini adalah 0\");",
+              "err": {},
+              "uuid": "dd3b8590-d595-4091-8158-8fe0dd2fc418",
+              "parentUUID": "f112221e-d0f6-46ed-9728-79280b49fd15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check masukkan produk stock 1",
+              "fullTitle": "User Keranjang Check masukkan produk stock 1",
+              "timedOut": null,
+              "duration": 3769,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"(//div[@class='product-view'])[36]\").invoke('attr', 'style', 'display: none');\ncy.xpath(\"//a[normalize-space()='Contoh Product']\").first().click();\ncy.get(\"#add-to-cart\").click().wait(500);\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Berhasil\");",
+              "err": {},
+              "uuid": "d4377a9b-ddb3-4213-8b0c-7b48f3bf5841",
+              "parentUUID": "f112221e-d0f6-46ed-9728-79280b49fd15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check increment produk dikeranjang",
+              "fullTitle": "User Keranjang Check increment produk dikeranjang",
+              "timedOut": null,
+              "duration": 3896,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[href='https://wikanta.com/cart']\").click();\ncy.get(\"  input[placeholder='Kuantitas']\").clear().type(\"10\").type(\"{enter}\");\ncy.get(\".cart-total.d-block.mb-2\").scrollIntoView().should(\"contain\", \"Rp 100.000\");",
+              "err": {},
+              "uuid": "79d4d81b-9f0e-4107-a4c4-6fa79cc09e62",
+              "parentUUID": "f112221e-d0f6-46ed-9728-79280b49fd15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check hapus produk di keranjang",
+              "fullTitle": "User Keranjang Check hapus produk di keranjang",
+              "timedOut": null,
+              "duration": 3575,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[href='https://wikanta.com/cart']\").click();\ncy.get(\".btn-delete\").click();\ncy.get(\".swal2-confirm\").click();\ncy.get(\".text-center.mt-5.mb-5\").should(\"contain\", \"Tidak ada data\");",
+              "err": {},
+              "uuid": "cc6aaa0d-45cf-4849-9e8f-1c711fc801af",
+              "parentUUID": "f112221e-d0f6-46ed-9728-79280b49fd15",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ad097d7b-1aa7-4128-ab39-4d739f949ab9",
+            "dd3b8590-d595-4091-8158-8fe0dd2fc418",
+            "d4377a9b-ddb3-4213-8b0c-7b48f3bf5841",
+            "79d4d81b-9f0e-4107-a4c4-6fa79cc09e62",
+            "cc6aaa0d-45cf-4849-9e8f-1c711fc801af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20230,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

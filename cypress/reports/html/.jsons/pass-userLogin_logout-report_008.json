@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-03T08:12:56.192Z",
+    "end": "2025-07-03T08:13:12.115Z",
+    "duration": 15923,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "044ed900-d280-4e33-9747-4a92953e098f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\userLogin_logout.cy.js",
+      "file": "cypress\\e2e\\userLogin_logout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+          "title": "User Login & Logout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with valid credentials",
+              "fullTitle": "User Login & Logout should login with valid credentials",
+              "timedOut": null,
+              "duration": 3534,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.userLogin(_user.default.email, _user.default.password);\ncy.title().should('include', 'Beranda');",
+              "err": {},
+              "uuid": "a1463f54-ac20-4c38-aff6-9704b070e3e0",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not login with invalid credentials",
+              "fullTitle": "User Login & Logout should not login with invalid credentials",
+              "timedOut": null,
+              "duration": 1249,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.userLogin('admin@gmail.com', 'wrongpass');\ncy.get('span.invalid-feedback > strong').should('contain', 'Identitas tersebut tidak cocok dengan data kami.');",
+              "err": {},
+              "uuid": "76f8fc39-4ce4-48ec-a07e-3cfb0faeb56e",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show validation error if fields are empty",
+              "fullTitle": "User Login & Logout should show validation error if fields are empty",
+              "timedOut": null,
+              "duration": 652,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.userLogin(' ', ' ');\ncy.get('input#email').invoke('prop', 'validationMessage').should('contain', 'Silahkan isi kolomnya');",
+              "err": {},
+              "uuid": "f9908ee1-cae4-4d11-a173-6661c0e8cffa",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show validation error if fields email not formated",
+              "fullTitle": "User Login & Logout should show validation error if fields email not formated",
+              "timedOut": null,
+              "duration": 766,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.userLogin('user', '123123');\ncy.get('input#email').invoke('prop', 'validationMessage').should('contain', \"Harap sertakan '@' di alamat email. \");",
+              "err": {},
+              "uuid": "37c47fe9-12a0-4acc-9338-673cf8987bca",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should logout properly",
+              "fullTitle": "User Login & Logout should logout properly",
+              "timedOut": null,
+              "duration": 7508,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.userLogin(_user.default.email, _user.default.password);\ncy.userLogout();\ncy.title().should('include', 'Beranda');",
+              "err": {},
+              "uuid": "b094ac44-00b6-49df-823a-725bba273ec7",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not access dashboard when logged out",
+              "fullTitle": "User Login & Logout should not access dashboard when logged out",
+              "timedOut": null,
+              "duration": 2009,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/account/profile');\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "1f948f78-b702-41ba-bea5-ae9fcd3528b7",
+              "parentUUID": "3a77cf74-1410-4cda-80c1-ac0743181b79",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a1463f54-ac20-4c38-aff6-9704b070e3e0",
+            "76f8fc39-4ce4-48ec-a07e-3cfb0faeb56e",
+            "f9908ee1-cae4-4d11-a173-6661c0e8cffa",
+            "37c47fe9-12a0-4acc-9338-673cf8987bca",
+            "b094ac44-00b6-49df-823a-725bba273ec7",
+            "1f948f78-b702-41ba-bea5-ae9fcd3528b7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15718,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-04T00:22:38.496Z",
+    "end": "2025-07-04T00:23:14.135Z",
+    "duration": 35639,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52f688e3-63ae-45f9-8c69-83954668cc3e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\adminArtikel.cy.js",
+      "file": "cypress\\e2e\\adminArtikel.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e93add2-8682-44e2-b143-60e190756156",
+          "title": "Admin Artikel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tambah artikel tanpa judul",
+              "fullTitle": "Admin Artikel Tambah artikel tanpa judul",
+              "timedOut": null,
+              "duration": 8397,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[class='btn btn-primary']\").click();\ncy.get(\"textarea#summary\").type(\"test\");\ncy.get(\".select2-selection\").click();\ncy.get(\".select2-results__option\").contains(/^Active$/) // regex match persis \"Active\"\n.click();\ncy.get(\".direction > .btn-primary\").scrollIntoView().click();\ncy.wait(300); // kalau muncul terlalu cepat lalu hilang\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Harap isi formulir\");",
+              "err": {},
+              "uuid": "d2689370-2e53-4b45-ac55-6f0acd9d8cc5",
+              "parentUUID": "1e93add2-8682-44e2-b143-60e190756156",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah artikel tanpa konten",
+              "fullTitle": "Admin Artikel Tambah artikel tanpa konten",
+              "timedOut": null,
+              "duration": 4232,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[class='btn btn-primary']\").click();\ncy.get(\"input[placeholder='Title']\").type(\"test\");\ncy.get(\".direction > .btn-primary\").scrollIntoView().click();\ncy.wait(300); // kalau muncul terlalu cepat lalu hilang\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Harap isi formulir\");",
+              "err": {},
+              "uuid": "3948d37b-2e27-4453-ac5c-7e58a1bbd1a1",
+              "parentUUID": "1e93add2-8682-44e2-b143-60e190756156",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah artikel",
+              "fullTitle": "Admin Artikel Tambah artikel",
+              "timedOut": null,
+              "duration": 11385,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[class='btn btn-primary']\").click();\ncy.get(\"input[placeholder='Title']\").type(\"test\");\ncy.frameLoaded(\"iframe[title='Rich Text Editor, article_section_1']\");\ncy.iframe(\"iframe[title='Rich Text Editor, article_section_1']\").clear().type(\"welcome {cmd+a}\");\ncy.get(\"textarea#summary\").type(\"test\");\ncy.get(\"button[class='btn btn-primary btn-next']\").scrollIntoView();\ncy.get(\".select2-selection\").click();\ncy.get(\".select2-results__option\").contains(/^Active$/) // regex match persis \"Active\"\n.click();\ncy.wait(2000);\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-info _btnCategory_']\").click();\ncy.wait(2000);\ncy.get(\".col-md > .form-group > .select2 > .selection > .select2-selection\").click();\ncy.get(\"input[role='searchbox']\").type(\"Rohani\").type(\"{enter}\");\ncy.get(\"#btnContinueCategory\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"input[name='image[file][]']\").attachFile(\"test.png\");\ncy.get(\"textarea[placeholder='Note']\").type(\"test\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"#table-post_wrapper\").should(\"contain\", \"test\");",
+              "err": {},
+              "uuid": "39f773d6-7851-489c-a905-629cac32f686",
+              "parentUUID": "1e93add2-8682-44e2-b143-60e190756156",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit artikel",
+              "fullTitle": "Admin Artikel Edit artikel",
+              "timedOut": null,
+              "duration": 7750,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"(//a[@class='btn btn-primary btn-icon'])[4]\").click();\ncy.get(\"input[placeholder='Title']\").clear().type(\"test2\");\ncy.frameLoaded(\"iframe[title='Rich Text Editor, article_section_1']\");\ncy.iframe(\"iframe[title='Rich Text Editor, article_section_1']\").clear().type(\"welcome {cmd+a}\");\ncy.get(\"textarea#summary\").clear().type(\"test\");\ncy.get(\"button[class='btn btn-primary btn-next']\").scrollIntoView();\ncy.get(\".select2-selection\").click();\ncy.get(\".select2-results__option\").contains(/^Active$/) // regex match persis \"Active\"\n.click();\ncy.wait(2000);\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"#table-post_wrapper\").should(\"contain\", \"test2\");",
+              "err": {},
+              "uuid": "d1c177e6-b772-4a8a-8cd3-fa26b7fb8c49",
+              "parentUUID": "1e93add2-8682-44e2-b143-60e190756156",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hapus artikel - ",
+              "fullTitle": "Admin Artikel Hapus artikel - ",
+              "timedOut": null,
+              "duration": 3546,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"(//button[@name='button'])[4]\").click();\ncy.xpath(\"//button[normalize-space()='Iya, hapus itu!']\").click();\ncy.get(\"#table-post_wrapper\").should(\"not.contain\", \"test2\");",
+              "err": {},
+              "uuid": "37b36aee-bad3-4315-a30e-76fe336f4862",
+              "parentUUID": "1e93add2-8682-44e2-b143-60e190756156",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2689370-2e53-4b45-ac55-6f0acd9d8cc5",
+            "3948d37b-2e27-4453-ac5c-7e58a1bbd1a1",
+            "39f773d6-7851-489c-a905-629cac32f686",
+            "d1c177e6-b772-4a8a-8cd3-fa26b7fb8c49",
+            "37b36aee-bad3-4315-a30e-76fe336f4862"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35310,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

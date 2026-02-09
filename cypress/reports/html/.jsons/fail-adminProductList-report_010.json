@@ -1,0 +1,210 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-03T08:46:05.355Z",
+    "end": "2025-07-03T08:47:14.708Z",
+    "duration": 69353,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b1aeb3cf-a3fe-4d20-985a-aada2c37741a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\adminProductList.cy.js",
+      "file": "cypress\\e2e\\adminProductList.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+          "title": "Admin Produk list",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tambah produk tanpa nama",
+              "fullTitle": "Admin Produk list Tambah produk tanpa nama",
+              "timedOut": null,
+              "duration": 9501,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Create']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Harap isi formulir\");",
+              "err": {},
+              "uuid": "903e39ce-652d-4e49-98c0-b06aec094326",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah produk tanpa harga",
+              "fullTitle": "Admin Produk list Tambah produk tanpa harga",
+              "timedOut": null,
+              "duration": 12663,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Create']\").click();\ncy.get(\"input[placeholder='Product Name']\").type(\"test\");\ncy.get(\"input[placeholder='Product SKU']\").type(\"test\");\ncy.get(\"input[placeholder='Product Barcode']\").type(\"test\");\ncy.get(\"input[placeholder='Product Weight']\").type(\"10\");\ncy.get(\"input[placeholder='Product Width']\").type(\"10\");\ncy.get(\"input[placeholder='Product Height']\").type(\"10\");\ncy.get(\"input[placeholder='Product Length']\").type(\"10\");\ncy.get(\"input[placeholder='Product Minimum Quantity']\").type(\"10\");\ncy.get(\"#select2-type-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Ready Order\").type(\"{enter}\");\ncy.get(\"#select2-kind-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Finish Good\").type(\"{enter}\");\ncy.frameLoaded(\"iframe[title='Rich Text Editor, summary-ckeditor']\");\ncy.iframe(\"iframe[title='Rich Text Editor, summary-ckeditor']\").clear().type(\"Welcome\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Harap isi formulir\");",
+              "err": {},
+              "uuid": "58ccbc68-e443-4a5e-a7ca-060a183feb2c",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah produk valid",
+              "fullTitle": "Admin Produk list Tambah produk valid",
+              "timedOut": null,
+              "duration": 15612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Create']\").click();\ncy.get(\"input[placeholder='Product Name']\").type(\"test\");\ncy.get(\"input[placeholder='Product SKU']\").type(\"test\");\ncy.get(\"input[placeholder='Product Barcode']\").type(\"test\");\ncy.get(\"input[placeholder='Product Weight']\").type(\"10\");\ncy.get(\"input[placeholder='Product Width']\").type(\"10\");\ncy.get(\"input[placeholder='Product Height']\").type(\"10\");\ncy.get(\"input[placeholder='Product Length']\").type(\"10\");\ncy.get(\"input[placeholder='Product Minimum Quantity']\").type(\"10\");\ncy.get(\"#select2-type-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Ready Order\").type(\"{enter}\");\ncy.get(\"#select2-kind-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Finish Good\").type(\"{enter}\");\ncy.frameLoaded(\"iframe[title='Rich Text Editor, summary-ckeditor']\");\ncy.iframe(\"iframe[title='Rich Text Editor, summary-ckeditor']\").clear().type(\"Welcome\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"input[placeholder='Price']\").type(\"10\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[data-model='Category']\").click().wait(500);\ncy.xpath(\"(//span[@role='combobox'])[3]\").click();\ncy.get(\"input[role='searchbox']\").type(\"Jilbab\").type(\"{enter}\");\ncy.xpath(\"(//span[@role='combobox'])[4]\").click();\ncy.get(\"input[role='searchbox']\").type(\"Cadar\").type(\"{enter}\");\ncy.get(\"#continue_category_series\").click();\ncy.get(\".modal-backdrop\").invoke(\"remove\");\ncy.get(\"button[data-model='Series']\").click();\ncy.xpath(\"(//span[@role='combobox'])[3]\").click();\ncy.get(\"input[role='searchbox']\").type(\"Series\").type(\"{enter}\");\ncy.get(\"#continue_category_series\").click();\ncy.get(\".modal-backdrop\").invoke(\"remove\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.xpath(\"(//input[@name='image[]'])[1]\").attachFile(\"test.png\");\ncy.get(\".modal-backdrop\").invoke(\"remove\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.xpath(\"(//textarea[@placeholder='Content'])[1]\").clear().type(\"Test\");\ncy.xpath(\"(//textarea[@placeholder='Content'])[2]\").clear().type(\"Test\");\n// cy.get(\"button[class='btn btn-primary btn-next']\").click();\n// cy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"success\");",
+              "err": {},
+              "uuid": "caf16b1c-2cd0-4e87-a9b0-3c34f462cd0d",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit Produk",
+              "fullTitle": "Admin Produk list Edit Produk",
+              "timedOut": null,
+              "duration": 18448,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='search']\").type(\"test\");\ncy.get(\"#table-product_wrapper\").should(\"contain\", \"test\");\ncy.get(\".btn.btn-primary.btn-icon\").click();\ncy.get(\"input[placeholder='Product Name']\").clear().type(\"test2\");\ncy.get(\"input[placeholder='Product SKU']\").clear().type(\"test2\");\ncy.get(\"input[placeholder='Product Barcode']\").clear().type(\"test2\");\ncy.get(\"input[placeholder='Product Weight']\").clear().type(\"10\");\ncy.get(\"input[placeholder='Product Width']\").clear().type(\"10\");\ncy.get(\"input[placeholder='Product Height']\").clear().type(\"10\");\ncy.get(\"input[placeholder='Product Length']\").clear().type(\"10\");\ncy.get(\"input[placeholder='Product Minimum Quantity']\").clear().type(\"10\");\ncy.get(\"#select2-type-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Ready Order\").type(\"{enter}\");\ncy.get(\"#select2-kind-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Finish Good\").type(\"{enter}\");\ncy.frameLoaded(\"iframe[title='Rich Text Editor, summary-ckeditor']\");\ncy.iframe(\"iframe[title='Rich Text Editor, summary-ckeditor']\").clear().type(\"Welcome\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\n//cy.get(\"input[placeholder='Price']\").type(\"10\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\n// cy.get(\"button[data-model='Category']\").click();\n// cy.xpath(\"(//span[@role='combobox'])[3]\").click();\n// cy.get(\"input[role='searchbox']\").type(\"Category\").type(\"{enter}\");\n// cy.get(\"#continue_category_series\").click();\n// cy.get(\".modal-backdrop\").invoke(\"remove\");\n// cy.xpath(\"//button[@data-model='Series'][normalize-space()='Select']\")\n//   .should(\"be.visible\")\n//   .click();\n// cy.xpath(\"(//span[@role='combobox'])[3]\").click();\n// cy.get(\"input[role='searchbox']\").type(\"Series\").type(\"{enter}\");\n// cy.get(\"#continue_category_series\").click();\n// cy.get(\".modal-backdrop\").invoke(\"remove\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\n// cy.xpath(\"(//input[@name='image[]'])[1]\").attachFile(\"test.png\");\n// cy.get(\".modal-backdrop\").invoke(\"remove\");\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\"button[class='btn btn-primary btn-next']\").click();\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"success\");\ncy.get(\"input[type='search']\").clear().type(\"test2\");\ncy.get(\"#table-product_wrapper\").should(\"contain\", \"test2\");",
+              "err": {},
+              "uuid": "c328da6b-cb81-4bed-abfe-335c6dd4ecce",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cari Produk",
+              "fullTitle": "Admin Produk list Cari Produk",
+              "timedOut": null,
+              "duration": 3993,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='search']\").clear().type(\"test2\");\ncy.get(\"#table-product_wrapper\").should(\"contain\", \"test2\");",
+              "err": {},
+              "uuid": "14a3606a-cc0f-4fde-81a7-75cd9d4b8326",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hapus Produk",
+              "fullTitle": "Admin Produk list Hapus Produk",
+              "timedOut": null,
+              "duration": 8436,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\adminProductList.cy.js\\\\Admin Produk list -- Hapus Produk (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.get(\"input[type='search']\").clear().type(\"test2\");\ncy.wait(1000);\ncy.get(\"button[name='button']\").click();\ncy.xpath(\"//button[normalize-space()='Iya, hapus itu!']\").should(\"be.visible\").click();\n//cy.xpath(\"//button[normalize-space()='Kembali']\").click();\ncy.get(\"#table-product_wrapper\").should(\"not.contain\", \"test2\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div#table-product_wrapper.dataTables_wrapper.no-footer>' not to contain 'test2'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div#table-product_wrapper.dataTables_wrapper.no-footer>' not to contain 'test2'\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminProductList.cy.js:160:37)",
+                "diff": null
+              },
+              "uuid": "59d56014-b68f-4c03-9c26-8491fb1d1e73",
+              "parentUUID": "15b35db0-b3de-4660-8b60-6b3ab9156ac8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "903e39ce-652d-4e49-98c0-b06aec094326",
+            "58ccbc68-e443-4a5e-a7ca-060a183feb2c",
+            "caf16b1c-2cd0-4e87-a9b0-3c34f462cd0d",
+            "c328da6b-cb81-4bed-abfe-335c6dd4ecce",
+            "14a3606a-cc0f-4fde-81a7-75cd9d4b8326"
+          ],
+          "failures": [
+            "59d56014-b68f-4c03-9c26-8491fb1d1e73"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 68653,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

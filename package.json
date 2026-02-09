@@ -1,0 +1,30 @@
+{
+  "name": "cypress_wikanta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run --e2e",
+    "cy:edge": "npx cypress run --browser edge",
+    "cy:chrome": "npx cypress run --browser chrome",
+    "cy:browser": " npx cypress run --browser edge --headed",
+    "test:ctrf": "cypress run --reporter cypress-ctrf-json-reporter",
+    "report:all": "npx cypress run && node generate-summary.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.0",
+    "cypress": "^14.5.0",
+    "cypress-ctrf-json-reporter": "^0.0.12",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3"
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "results": {
+    "tool": {
+      "name": "cypress"
+    },
+    "summary": {
+      "tests": 46,
+      "failed": 2,
+      "passed": 44,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1751588550340,
+      "stop": 1751588819042
+    },
+    "tests": [
+      {
+        "name": "Admin Artikel Tambah artikel tanpa judul",
+        "status": "passed",
+        "duration": 8444,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminArtikel.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Artikel Tambah artikel tanpa konten",
+        "status": "passed",
+        "duration": 4308,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminArtikel.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Artikel Tambah artikel",
+        "status": "passed",
+        "duration": 11443,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminArtikel.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Artikel Edit artikel",
+        "status": "passed",
+        "duration": 7795,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminArtikel.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Artikel Hapus artikel - ",
+        "status": "passed",
+        "duration": 3596,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminArtikel.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Category Tambah category tanpa isi",
+        "status": "passed",
+        "duration": 5554,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminCategory.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Category Tambah category valid",
+        "status": "passed",
+        "duration": 7539,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminCategory.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Category Edit category ",
+        "status": "passed",
+        "duration": 7857,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminCategory.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Category Hapus kategori tidak digunakan",
+        "status": "passed",
+        "duration": 4801,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminCategory.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Category Hapus kategori yang sedang digunakan",
+        "status": "failed",
+        "duration": 8878,
+        "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.swal2-popup`, but never found it.\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminCategory.cy.js:74:27)",
+        "trace": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.swal2-popup`, but never found it.\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminCategory.cy.js:74:27)",
+        "rawStatus": "failed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminCategory.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "D:\\2. Heru\\SDET\\cypress_wikanta\\cypress\\screenshots\\adminCategory.cy.js\\Admin Category -- Hapus kategori yang sedang digunakan (failed).png"
+          }
+        ]
+      },
+      {
+        "name": "Admin Login & Logout should login with valid credentials",
+        "status": "passed",
+        "duration": 4328,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Login & Logout should not login with invalid credentials",
+        "status": "passed",
+        "duration": 1484,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Login & Logout should show validation error if fields are empty",
+        "status": "passed",
+        "duration": 660,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Login & Logout should show validation error if fields email not formated",
+        "status": "passed",
+        "duration": 780,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Login & Logout should logout properly",
+        "status": "passed",
+        "duration": 3925,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Login & Logout should not access dashboard when logged out",
+        "status": "passed",
+        "duration": 562,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Tambah produk tanpa nama",
+        "status": "passed",
+        "duration": 6934,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Tambah produk tanpa harga",
+        "status": "passed",
+        "duration": 7034,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Tambah produk valid",
+        "status": "passed",
+        "duration": 10897,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Edit Produk",
+        "status": "passed",
+        "duration": 10173,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Cari Produk",
+        "status": "passed",
+        "duration": 3299,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "Admin Produk list Hapus Produk",
+        "status": "failed",
+        "duration": 8492,
+        "message": "AssertionError: Timed out retrying after 4000ms: expected '<div#table-product_wrapper.dataTables_wrapper.no-footer>' not to contain 'test2'\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminProductList.cy.js:160:37)",
+        "trace": "AssertionError: Timed out retrying after 4000ms: expected '<div#table-product_wrapper.dataTables_wrapper.no-footer>' not to contain 'test2'\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminProductList.cy.js:160:37)",
+        "rawStatus": "failed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\adminProductList.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "D:\\2. Heru\\SDET\\cypress_wikanta\\cypress\\screenshots\\adminProductList.cy.js\\Admin Produk list -- Hapus Produk (failed).png"
+          }
+        ]
+      },
+      {
+        "name": "User Kategori Check kategori berisi produk",
+        "status": "passed",
+        "duration": 4289,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKategori.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Kategori Check kategori tidak berisi produk",
+        "status": "passed",
+        "duration": 2265,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKategori.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Keranjang Check keranjang kosong",
+        "status": "passed",
+        "duration": 4359,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKeranjang.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Keranjang Check masukkan produk stock 0",
+        "status": "passed",
+        "duration": 3732,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKeranjang.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Keranjang Check masukkan produk stock 1",
+        "status": "passed",
+        "duration": 3343,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKeranjang.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Keranjang Check increment produk dikeranjang",
+        "status": "passed",
+        "duration": 2882,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKeranjang.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Keranjang Check hapus produk di keranjang",
+        "status": "passed",
+        "duration": 2799,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userKeranjang.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should login with valid credentials",
+        "status": "passed",
+        "duration": 3599,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should not login with invalid credentials",
+        "status": "passed",
+        "duration": 1242,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should show validation error if fields are empty",
+        "status": "passed",
+        "duration": 685,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should show validation error if fields email not formated",
+        "status": "passed",
+        "duration": 777,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should logout properly",
+        "status": "passed",
+        "duration": 2764,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Login & Logout should not access dashboard when logged out",
+        "status": "passed",
+        "duration": 541,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userLogin_logout.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa produk",
+        "status": "passed",
+        "duration": 6404,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa shipping method",
+        "status": "passed",
+        "duration": 6691,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa shipping service",
+        "status": "passed",
+        "duration": 7787,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa payment method",
+        "status": "passed",
+        "duration": 6090,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form origin payment",
+        "status": "passed",
+        "duration": 7791,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form origin payment name",
+        "status": "passed",
+        "duration": 7235,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form origin payment number",
+        "status": "passed",
+        "duration": 7117,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form destination payment",
+        "status": "passed",
+        "duration": 7599,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form destination payment name",
+        "status": "passed",
+        "duration": 8331,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Order tanpa isi form destination number",
+        "status": "passed",
+        "duration": 8524,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      },
+      {
+        "name": "User Order Checkout berhasil",
+        "status": "passed",
+        "duration": 11466,
+        "rawStatus": "passed",
+        "type": "e2e",
+        "filePath": "cypress\\e2e\\userOrder.cy.js",
+        "retries": 0,
+        "flaky": false,
+        "browser": "edge 136.0.3240.50"
+      }
+    ]
+  }
+}

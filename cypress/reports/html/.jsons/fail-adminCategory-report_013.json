@@ -1,0 +1,191 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-03T23:18:17.212Z",
+    "end": "2025-07-03T23:18:53.406Z",
+    "duration": 36194,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "acd06b9a-39de-42cc-aaf1-cd915cfd24c8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\adminCategory.cy.js",
+      "file": "cypress\\e2e\\adminCategory.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+          "title": "Admin Category",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tambah category tanpa isi",
+              "fullTitle": "Admin Category Tambah category tanpa isi",
+              "timedOut": null,
+              "duration": 5986,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Create']\").click();\ncy.xpath(\"//button[normalize-space()='Buat']\").click();\ncy.xpath(\"//input[@id='name']\").invoke(\"prop\", \"validationMessage\").should(\"contain\", \"Silahkan isi kolomnya.\");",
+              "err": {},
+              "uuid": "49cf8186-5c48-4be0-8a63-e81c8e030e24",
+              "parentUUID": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah category valid",
+              "fullTitle": "Admin Category Tambah category valid",
+              "timedOut": null,
+              "duration": 7619,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//a[normalize-space()='Create']\").click();\ncy.xpath(\"//input[@id='name']\").type(\"testing\");\ncy.get(\"#select2-parent_id-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Cadar\").wait(1000).type(\"{enter}\");\ncy.get(\"#select2-status-container\").click();\ncy.get(\"input[role='searchbox']\").clear().type(\"Active\");\ncy.get(\".select2-dropdown.select2-dropdown--below\").contains(/^Active$/) // regex match persis \"Active\"\n.click();\ncy.xpath(\"//button[normalize-space()='Buat']\").click();\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Berhasil\");\ncy.get(\"input[type='search']\").clear().type(\"testing\").wait(1000);\ncy.get(\"#table-category_wrapper\").should(\"contain\", \"testing\").should(\"contain\", \"Cadar\");",
+              "err": {},
+              "uuid": "91509db9-98b5-40f0-b36d-7f3ec1e0736f",
+              "parentUUID": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit category ",
+              "fullTitle": "Admin Category Edit category ",
+              "timedOut": null,
+              "duration": 8029,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='search']\").type(\"testing\").wait(1000);\ncy.xpath(\"(//a[@class='btn btn-primary btn-icon'])[1]\").click();\ncy.xpath(\"//input[@id='name']\").clear().type(\"testing2\");\ncy.get(\"#select2-parent_id-container\").click();\ncy.get(\"input[role='searchbox']\").clear().type(\"Cadar\").wait(500).type(\"{enter}\");\ncy.get(\"#select2-status-container\").click();\ncy.get(\"input[role='searchbox']\").type(\"Active\").click();\ncy.xpath(\"//button[normalize-space()='Ubah']\").click();\ncy.get(\"input[type='search']\").clear().type(\"testing2\").wait(500);\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Berhasil\");\ncy.get(\"#table-category_wrapper\").should(\"contain\", \"testing2\").should(\"contain\", \"Cadar\");",
+              "err": {},
+              "uuid": "8f8d7b03-8a91-436f-9061-c3d7ef1c9db0",
+              "parentUUID": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hapus kategori tidak digunakan",
+              "fullTitle": "Admin Category Hapus kategori tidak digunakan",
+              "timedOut": null,
+              "duration": 4884,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='search']\").clear().type(\"testing2\").wait(1000);\ncy.xpath(\"(//i[@class='mdi mdi-delete'])[1]\").click();\ncy.xpath(\"//button[normalize-space()='Iya, hapus itu!']\").click().wait(100);\n//cy.xpath(\"//button[normalize-space()='Kembali']\").click()\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Berhasil\");",
+              "err": {},
+              "uuid": "694e3501-3747-4232-adbd-5e6529921f1c",
+              "parentUUID": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hapus kategori yang sedang digunakan",
+              "fullTitle": "Admin Category Hapus kategori yang sedang digunakan",
+              "timedOut": null,
+              "duration": 9278,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\adminCategory.cy.js\\\\Admin Category -- Hapus kategori yang sedang digunakan (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.get(\"input[type='search']\").clear().type(\"Hijab Instan\").wait(1000);\ncy.xpath(\"(//i[@class='mdi mdi-delete'])[1]\").click();\ncy.xpath(\"//button[normalize-space()='Iya, hapus itu!']\").click().wait(100);\n//cy.xpath(\"//button[normalize-space()='Kembali']\").click()\ncy.get(\".swal2-popup\").should(\"be.visible\").and(\"contain\", \"Gagal\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.swal2-popup`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.swal2-popup`, but never found it.\n    at Context.eval (webpack://cypress_wikanta/./cypress/e2e/adminCategory.cy.js:74:27)",
+                "diff": null
+              },
+              "uuid": "1f220533-94c4-49af-bffa-45ff1c2df8a5",
+              "parentUUID": "03ea7f99-1d14-4a1f-ae1e-2c3298a290e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49cf8186-5c48-4be0-8a63-e81c8e030e24",
+            "91509db9-98b5-40f0-b36d-7f3ec1e0736f",
+            "8f8d7b03-8a91-436f-9061-c3d7ef1c9db0",
+            "694e3501-3747-4232-adbd-5e6529921f1c"
+          ],
+          "failures": [
+            "1f220533-94c4-49af-bffa-45ff1c2df8a5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35796,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

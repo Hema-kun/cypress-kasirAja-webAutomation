@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-29T23:29:45.927Z",
+    "end": "2025-06-29T23:29:52.826Z",
+    "duration": 6899,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "97b0c5f2-00d9-4f19-bd7b-b1a5ff4e44fb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\userKategori.cy.js",
+      "file": "cypress\\e2e\\userKategori.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02f69131-834d-4633-897c-0d552ba7b9af",
+          "title": "User Kategori",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check kategori berisi produk",
+              "fullTitle": "User Kategori Check kategori berisi produk",
+              "timedOut": null,
+              "duration": 4301,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".toggle-bar-wrapper\").scrollIntoView().trigger('mouseenter');\ncy.get(\":nth-child(3) > #dropdownCategory-1\").trigger(\"mouseenter\");\ncy.contains('a', 'Pashima').click();\ncy.get(\".product-info\").should(\"contain\", \"Pashmina\");",
+              "err": {},
+              "uuid": "23127430-1261-42bf-beab-058cb7e63425",
+              "parentUUID": "02f69131-834d-4633-897c-0d552ba7b9af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check kategori tidak berisi produk",
+              "fullTitle": "User Kategori Check kategori tidak berisi produk",
+              "timedOut": null,
+              "duration": 2523,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".toggle-bar-wrapper\").scrollIntoView().trigger('mouseenter');\ncy.get(\":nth-child(5) > #dropdownCategory-1\").trigger(\"mouseenter\");\ncy.contains('a', 'Vest Muslim').click();\ncy.get(\":nth-child(2) > .text-center\").should(\"contain\", \"Tidak ada data yang cocok\");",
+              "err": {},
+              "uuid": "096baaae-c5e3-48ef-a659-281fdb1f1515",
+              "parentUUID": "02f69131-834d-4633-897c-0d552ba7b9af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "23127430-1261-42bf-beab-058cb7e63425",
+            "096baaae-c5e3-48ef-a659-281fdb1f1515"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6824,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "reportFilename": "[status]-[name]-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
